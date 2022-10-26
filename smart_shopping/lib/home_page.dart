@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                   'Electronics',
                   style: TextStyle(
                       fontFamily: 'MyFont',
-                      fontSize: 40,
+                      fontSize: 50,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 31, 60, 65)),
                 ),
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                   'Food',
                   style: TextStyle(
                       fontFamily: 'MyFont',
-                      fontSize: 40,
+                      fontSize: 50,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 31, 60, 65)),
                 ),
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                   'Cloths',
                   style: TextStyle(
                       fontFamily: 'MyFont',
-                      fontSize: 40,
+                      fontSize: 50,
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 31, 60, 65)),
                 ),

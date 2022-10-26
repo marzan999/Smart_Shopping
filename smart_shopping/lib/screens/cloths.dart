@@ -24,22 +24,14 @@ class _ClothsPageState extends State<ClothsPage> {
         ),
         title: Text(
           'Cloths',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
         ),
       ),
       body: Column(
         children: [
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.green,
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.yellow,
-            ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.40,
           ),
           Expanded(
             flex: 1,
@@ -47,16 +39,22 @@ class _ClothsPageState extends State<ClothsPage> {
               child: PageView.builder(
                   itemCount: product_list3.length,
                   itemBuilder: ((context, index) {
-                    var product2 = product_list3[index];
+                    var product3 = product_list3[index];
                     return Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 10, left: 10),
-                          child: Image.asset(
-                            product2.image,
-                            height: double.infinity,
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 370,
                             width: double.infinity,
-                            fit: BoxFit.cover,
+                            decoration: BoxDecoration(
+                                color: Colors.teal,
+                                borderRadius: BorderRadius.circular(25),
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                      product3.image,
+                                    ),
+                                    fit: BoxFit.cover)),
                           ),
                         ),
                       ],
@@ -64,6 +62,9 @@ class _ClothsPageState extends State<ClothsPage> {
                   })),
             ),
           ),
+          // SizedBox(
+          //   height: MediaQuery.of(context).size.height * 0.10,
+          // ),
         ],
       ),
     );

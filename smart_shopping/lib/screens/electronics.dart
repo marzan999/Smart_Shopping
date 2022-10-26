@@ -24,17 +24,12 @@ class _ElectronicsPageState extends State<ElectronicsPage> {
           ),
           title: Text(
             'Electronics',
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
           ),
         ),
         body: Column(
           children: [
-            // Expanded(
-            //   flex: 1,
-            //   child: Container(
-            //     color: Colors.white,
-            //   ),
-            // ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.10,
             ),
@@ -49,11 +44,20 @@ class _ElectronicsPageState extends State<ElectronicsPage> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(),
-                            child: Image.asset(
-                              product.image,
-                              height: double.infinity,
-                              width: double.infinity,
-                              fit: BoxFit.cover,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 370,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                    color: Colors.teal,
+                                    borderRadius: BorderRadius.circular(25),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                          product.image,
+                                        ),
+                                        fit: BoxFit.cover)),
+                              ),
                             ),
                           ),
                         ],
@@ -64,24 +68,6 @@ class _ElectronicsPageState extends State<ElectronicsPage> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.35,
             ),
-            // Expanded(
-            //   flex: 1,
-            //   child: Container(
-            //     color: Colors.white,
-            //   ),
-            // ),
-            // Expanded(
-            //   flex: 1,
-            //   child: Container(
-            //     color: Colors.white,
-            //   ),
-            // ),
-            // Expanded(
-            //   flex: 1,
-            //   child: Container(
-            //     color: Colors.white,
-            //   ),
-            // ),
           ],
         ));
   }

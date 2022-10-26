@@ -24,16 +24,14 @@ class _FoodPageState extends State<FoodPage> {
         ),
         title: Text(
           'Food',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
         ),
       ),
       body: Column(
         children: [
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.green,
-            ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.25,
           ),
           Expanded(
             flex: 1,
@@ -45,12 +43,18 @@ class _FoodPageState extends State<FoodPage> {
                     return Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 10, left: 10),
-                          child: Image.asset(
-                            product2.image,
-                            height: double.infinity,
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 370,
                             width: double.infinity,
-                            fit: BoxFit.cover,
+                            decoration: BoxDecoration(
+                                color: Colors.teal,
+                                borderRadius: BorderRadius.circular(25),
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                      product2.image,
+                                    ),
+                                    fit: BoxFit.cover)),
                           ),
                         ),
                       ],
@@ -58,11 +62,8 @@ class _FoodPageState extends State<FoodPage> {
                   })),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.yellow,
-            ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.20,
           ),
         ],
       ),
